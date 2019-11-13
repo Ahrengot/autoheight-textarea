@@ -2,7 +2,7 @@
 
 **autoheight-textarea** is a small (7kb gzipped) HTML5 [custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) wrapper around textarea elements that will automatically resize itself as the user types. 
 
-It works everywhere, because it's implemented as a custom element. Including: Virtual DOM's (React, Elm, etc.), server-side rendered HTML and, of course, good old index.html files.
+It works everywhere, because it's implemented as a custom element. Including: Virtual DOMs (React, Elm, etc.), server-side rendered HTML and, of course, good old index.html files.
 
 The component will respect any minimum height set on the textarea via the `rows` attribute.
 
