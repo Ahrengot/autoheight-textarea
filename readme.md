@@ -1,6 +1,6 @@
 # autoheight-textarea
 
-[![npm version](https://badge.fury.io/js/autoheight-textarea.svg)](https://badge.fury.io/js/autoheight-textarea)
+[![NPM](https://nodei.co/npm/autoheight-textarea.png?compact=true)](https://npmjs.org/package/autoheight-textarea)
 
 **autoheight-textarea** is a small (7kb gzipped) HTML5 [custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) wrapper around textarea elements that will automatically resize itself as the user types. 
 
@@ -12,8 +12,9 @@ The component will respect any minimum height set on the textarea via the `rows`
 ![Example gif](https://user-images.githubusercontent.com/391810/68722016-7e556800-05b4-11ea-8f14-b3b117780dd6.gif)
 
 **Code sandboxes**
-Basic HTML: https://codesandbox.io/s/unruffled-http-2vm4c
-React.js: https://codesandbox.io/s/misty-violet-p1jwb
+
+- Basic HTML: https://codesandbox.io/s/unruffled-http-2vm4c
+- React.js: https://codesandbox.io/s/misty-violet-p1jwb
 
 
 ## Example usage
@@ -63,4 +64,4 @@ Html.node "autoheight-textarea"
 
 ## Browser support
 
-*TODO*
+This package uses the [@webcomponents/custom-elements](https://www.npmjs.com/package/@webcomponents/custom-elements) package under the hood which is compatible with all major browsers, including IE11.
