@@ -1,5 +1,3 @@
-# autoheight-textarea
-
 [![NPM](https://nodei.co/npm/autoheight-textarea.png?compact=true)](https://npmjs.org/package/autoheight-textarea)
 
 **autoheight-textarea** is a small (7kb gzipped) HTML5 [custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) wrapper around textarea elements that will automatically resize itself as the user types. 
@@ -8,7 +6,7 @@ It works everywhere, because it's implemented as a custom element. Including: Vi
 
 The component will respect any minimum height set on the textarea via the `rows` attribute.
 
-### Demo
+## Demo
 ![Example gif](https://user-images.githubusercontent.com/391810/68760200-9e674480-0611-11ea-99a1-8bd57bfc764d.gif)
 
 **Code sandboxes**
@@ -19,7 +17,7 @@ The component will respect any minimum height set on the textarea via the `rows`
 
 ## Example usage
 
-For any of the following examples, you just need to include the script on your page. For example, you could add this to your index.js file:
+For any of the following examples, all you need to do is include the script. For example, you could add this to the top of your main JS file:
 
 ```JavaScript
 import "autoheight-textarea";
@@ -29,15 +27,11 @@ import "autoheight-textarea";
 
 **React**
 ```JavaScript
-import "autoheight-textarea";
-
 const App = () => {
   return (
-    <div className="container">
-      <autoheight-textarea>
-        <textarea rows={4} placeholder="Type something..." />
-      </autoheight-textarea>
-    </div>
+    <autoheight-textarea>
+      <textarea rows={4} placeholder="Type something..." />
+    </autoheight-textarea>
   );
 }
 ```
@@ -51,15 +45,9 @@ const App = () => {
 
 **Elm**
 ```Elm
-Html.node "autoheight-textarea"
-    []
-    [ textarea
-        [ id "comment-input-field"
-        , rows 4
-        , placeholder "Type something..."
-        ]
-        []
-    ]
+Html.node "autoheight-textarea" [] [ 
+    textarea [ placeholder "Type something..." , rows 4 ] [] 
+  ]
 ```
 
 Feel free to add any other elements inside of the autoheight-textarea node. For instance, you could implement a Bootstrap textarea with form help text like so:
@@ -69,7 +57,7 @@ Feel free to add any other elements inside of the autoheight-textarea node. For 
   <autoheight-textarea>
     <label for="my_textarea">Example textarea</label>
     <textarea class="form-control" id="my_textarea" rows="4"></textarea>
-    <small id="my_textarea_help" class="form-text text-muted">This is what a Bootstrap textarea looks like</small>
+    <small class="form-text text-muted">This is what a Bootstrap textarea looks like</small>
   </autoheight-textarea>
 </div>
 ```
@@ -83,4 +71,6 @@ textarea:not(:focus) + .form-text {
 
 ## Browser support
 
-This package uses [@webcomponents/custom-elements](https://www.npmjs.com/package/@webcomponents/custom-elements) under the hood, which is compatible with all major browsers — including IE11.
+All major browsers — including IE11.
+
+This package uses [@webcomponents/custom-elements](https://www.npmjs.com/package/@webcomponents/custom-elements) under the hood.
