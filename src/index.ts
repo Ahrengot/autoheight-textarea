@@ -1,7 +1,7 @@
 import "@webcomponents/custom-elements";
 
 
-class AutogrowTextarea extends HTMLElement {
+class AutoheightTextarea extends HTMLElement {
   private textarea: HTMLTextAreaElement | null = null;
   private numCharacters: number = 0;
   private charCountTimer: number | null = null;
@@ -34,7 +34,7 @@ class AutogrowTextarea extends HTMLElement {
 
     setTimeout(() => {
       if (!this.textarea) {
-        console.error("<autogrow-textarea> needs a <textarea> as a direct child in order to initialize");
+        console.error("<autoheight-textarea> needs a <textarea> as a direct child in order to initialize");
       }
     }, 500);
   }
@@ -85,4 +85,4 @@ class AutogrowTextarea extends HTMLElement {
 }
 
 
-customElements.define("autoheight-textarea", AutogrowTextarea);
+customElements.define("autoheight-textarea", AutoheightTextarea);
