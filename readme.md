@@ -9,7 +9,7 @@ It works everywhere, because it's implemented as a custom element. Including: Vi
 The component will respect any minimum height set on the textarea via the `rows` attribute.
 
 ### Demo
-![Example gif](https://user-images.githubusercontent.com/391810/68722016-7e556800-05b4-11ea-8f14-b3b117780dd6.gif)
+![Example gif](https://user-images.githubusercontent.com/391810/68760200-9e674480-0611-11ea-99a1-8bd57bfc764d.gif)
 
 **Code sandboxes**
 
@@ -62,7 +62,7 @@ Html.node "autoheight-textarea"
     ]
 ```
 
-Feel free to add any elements next to the textarea inside of the autoheight-textarea element. E.g. you could implement a Bootstrap textarea with help text like so:
+Feel free to add any other elements inside of the autoheight-textarea node. For instance, you could implement a Bootstrap textarea with form help text like so:
 
 ```HTML
 <div class="form-group">
@@ -74,7 +74,7 @@ Feel free to add any elements next to the textarea inside of the autoheight-text
 </div>
 ```
 
-Why would you do that? Mostly because it makes things easier to select with CSS. For instance you might want to hide the help text until the textarea has focus. E.g.
+Why would you do that? Mostly because it makes things easier to select with CSS. For instance you might want to hide the help text until the textarea has focus.
 ```CSS
 textarea:not(:focus) + .form-text {
   display: none;
@@ -83,4 +83,4 @@ textarea:not(:focus) + .form-text {
 
 ## Browser support
 
-This package uses the [@webcomponents/custom-elements](https://www.npmjs.com/package/@webcomponents/custom-elements) package under the hood which is compatible with all major browsers, including IE11.
+This package uses [@webcomponents/custom-elements](https://www.npmjs.com/package/@webcomponents/custom-elements) under the hood, which is compatible with all major browsers — including IE11.
