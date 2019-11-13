@@ -62,6 +62,25 @@ Html.node "autoheight-textarea"
     ]
 ```
 
+Feel free to add any elements next to the textarea inside of the autoheight-textarea element. E.g. you could implement a Bootstrap textarea with help text like so:
+
+```HTML
+<div class="form-group">
+  <autoheight-textarea>
+    <label for="my_textarea">Example textarea</label>
+    <textarea class="form-control" id="my_textarea" rows="4"></textarea>
+    <small id="my_textarea_help" class="form-text text-muted">This is what a Bootstrap textarea looks like</small>
+  </autoheight-textarea>
+</div>
+```
+
+Why would you do that? Mostly because it makes things easier to select with CSS. For instance you might want to hide the help text until the textarea has focus. E.g.
+```CSS
+textarea:not(:focus) + .form-text {
+  display: none;
+}
+```
+
 ## Browser support
 
 This package uses the [@webcomponents/custom-elements](https://www.npmjs.com/package/@webcomponents/custom-elements) package under the hood which is compatible with all major browsers, including IE11.
