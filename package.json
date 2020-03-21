@@ -1,6 +1,6 @@
 {
   "name": "autoheight-textarea",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Custom element for automatically resizing textareas. Works everywhere: Virtual DOM and plain HTML",
   "files": [
     "dist"
