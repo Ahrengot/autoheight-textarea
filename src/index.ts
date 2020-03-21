@@ -1,6 +1,5 @@
 import "@webcomponents/custom-elements";
 
-
 class AutoheightTextarea extends HTMLElement {
   private textarea: HTMLTextAreaElement | null = null;
   private numCharacters: number = 0;
@@ -17,14 +16,14 @@ class AutoheightTextarea extends HTMLElement {
       this.init(textarea);
     }
 
-    // For Virtual DOMs, the children are added after this element has been instantiated, 
+    // For Virtual DOMs, the children are added after this element has been instantiated,
     // so we need to listen for mutations
     else {
       const observer = new MutationObserver(mutations => {
         mutations.forEach(mutation => {
           if (mutation.addedNodes.length && mutation.addedNodes[0].nodeName === "TEXTAREA") {
             observer.disconnect();
-            this.init((mutation.addedNodes[0] as HTMLTextAreaElement));
+            this.init(mutation.addedNodes[0] as HTMLTextAreaElement);
           }
         });
       });
@@ -34,7 +33,7 @@ class AutoheightTextarea extends HTMLElement {
 
     setTimeout(() => {
       if (!this.textarea) {
-        console.error("<autoheight-textarea> needs a <textarea> as a direct child in order to initialize");
+        console.error("<autoheight-textarea> needs a <textarea> child in order to initialize");
       }
     }, 500);
   }
@@ -69,7 +68,6 @@ class AutoheightTextarea extends HTMLElement {
     }
   }
 
-
   // Resize logic
   private resizeArea() {
     requestAnimationFrame(() => {
@@ -77,12 +75,11 @@ class AutoheightTextarea extends HTMLElement {
         return;
       }
 
-      this.textarea.style.height = '';
+      this.textarea.style.height = "";
       const trackedHeight = this.textarea.scrollHeight;
       this.textarea.style.height = `calc(0.5em + ${trackedHeight}px)`;
     });
   }
 }
-
 
 customElements.define("autoheight-textarea", AutoheightTextarea);
